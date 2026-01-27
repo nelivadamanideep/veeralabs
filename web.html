@@ -1,0 +1,226 @@
+<html lang="en" scrolling="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEERA LABS</title>
+    <link rel="stylesheet" href="web.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="myBody">
+        <div class="myNavBack"></div>
+        <div class="myNav hide" style="display: block;"></div>
+        
+        <div class="header-fixed">
+            <div class="nav-item navLogo" id="logo">
+                <img class="logo-img" src="logo.jpg" alt="VEERA LABS Logo">
+            </div>
+            <div class="nav-bar">
+                <ul class="nav-items-list">
+                    <li class="nav-item">
+                        <a class="nav-link Nav-Link" href="#" onclick="goHome(); return false;">HOME</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link Nav-Link" href="#" onclick="loadAbout(); return false;">ABOUT</a>
+                    </li>
+                    <li class="menuBarContr nav-item">
+                        <a class="nav-link Nav-Link" href="#" onclick="loadRD(); return false;">R&D</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link Nav-Link" href="#" onclick="Contact(); return false;">CONTACT </a>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        
+
+
+        
+        
+    </div>
+    
+    <script>
+        function loadAbout() {
+            const homeSection = document.getElementById('home');
+            const aboutContainer = document.getElementById('aboutContent');
+            const contactSection = document.getElementById('contact');
+            const rdContainer = document.getElementById('rdContent');
+            rdContainer.style.display = 'none';
+            homeSection.style.display = 'none';
+            contactSection.style.display = 'none';
+            aboutContainer.style.display = 'flex';
+            aboutContainer.innerHTML = `
+                <div class="about-profiles">
+                    <div class="profile-item" onclick="showProfile('company')">
+                        <h3>Company Profile</h3>
+                        <p>Learn about our company</p>
+                    </div>
+                    <div class="profile-item" onclick="showProfile('team')">
+                        <h3>Team</h3>
+                        <p>Meet our team members</p>
+                    </div>
+                    <div class="profile-item" onclick="showProfile('about')">
+                        <h3>About</h3>
+                        <p>More about us</p>
+                    </div>
+                </div>
+                <div id="profileContent"></div>
+            `;
+        }
+          
+        function showProfile(profileType) {
+            const profileContent = document.getElementById('profileContent');
+            const profilesDiv = document.querySelector('.about-profiles');
+            
+            const profiles = {
+                company: '<div class="profile-detail"><button class="back-button" onclick="goBack()">← Back</button><img src="companypro.png" alt="Company Profile" style="width:100%; height:auto;"></div>',
+                team: '<div class="profile-detail"><button class="back-button" onclick="goBack()">← Back</button><img src="team.png" alt="Team" style="width:100%; height:auto;"></div>',
+                about: '<div class="profile-detail"><button class="back-button" onclick="goBack()">← Back</button><img src="aboutus.png" alt="About" style="width:100%; height:auto;"></div>',
+                 };
+            if (profileType === 'company'|| profileType === 'team' || profileType === 'about' ) {
+                profilesDiv.style.display = 'none';
+            } else {
+                profilesDiv.style.display = 'flex';
+
+            }
+            profileContent.innerHTML = profiles[profileType] || '';
+
+            
+        }
+        function goBack() {
+            const profilesDiv = document.querySelector('.about-profiles');
+            const profileContent = document.getElementById('profileContent');
+            profilesDiv.style.display = 'flex';
+            
+            profileContent.innerHTML = '';
+        }
+        function loadRD() {
+            const homeSection = document.getElementById('home');
+            const aboutContainer = document.getElementById('aboutContent');
+            const rdContainer = document.getElementById('rdContent');
+            const contactSection = document.getElementById('contact');
+            homeSection.style.display = 'none';
+            contactSection.style.display = 'none';
+            aboutContainer.style.display = 'none';
+            rdContainer.style.display = 'flex';
+            rdContainer.innerHTML = `
+                <div class="rd-profiles">
+                    <div class="profile-item" onclick="rdProfile('dosages')">
+                        <h3> Dosages Expertise : Formulation and Analytical development  </h3>
+                        <p>Advanced research and development</p>
+                    </div>
+                    <div class="profile-item" onclick="rdProfile('formulation')">
+                        <h3>Formulation & Analytical Development Lab</h3>
+                        <p>Innovative product development</p>
+                    </div>
+                    <div class="profile-item" onclick="rdProfile('equipment')">
+                        <h3>Capacities of R&D Equipment's</h3>
+                        <p>Comprehensive equipment capabilities</p>
+                    </div>
+                </div>
+                <div id="rdProfileContent"></div>
+            `;
+        }
+         function rdProfile(profileType) {
+            const rdProfileContent = document.getElementById('rdProfileContent');
+            const profiles1Div = document.querySelector('.rd-profiles');
+            
+            const profiles1 = {
+                dosages: '<div class="profile-detail"><button class="back-button" onclick="goBack3()">← Back</button><img src="Dosage.png" alt="dosages" style="width:100%; height:auto;"></div>',
+                formulation: '<div class="profile-detail"><button class="back-button" onclick="goBack3()">← Back</button><img src="lab1.png" alt="formulation" style="width:100%; height:auto;"><img src="lab2.png" alt="formulation" style="width:100%; height:auto;"></div>',
+                equipment: '<div class="profile-detail"><button class="back-button" onclick="goBack3()">← Back</button><img src="equip.png" alt="equipment" style="width:100%; height:auto;"></div>',
+                 };
+            if (profileType === 'dosages'|| profileType === 'formulation' || profileType === 'equipment' ) {
+                profiles1Div.style.display = 'none';
+            } 
+            else {
+                profiles1Div.style.display = 'flex';
+
+            }
+            rdProfileContent.innerHTML = profiles1[profileType] || '';
+
+            
+        }
+        function goBack3() {
+          
+            const profiles1Div = document.querySelector('.rd-profiles');
+            const rdProfileContent = document.getElementById('rdProfileContent');
+            profiles1Div.style.display = 'flex';
+            rdProfileContent.innerHTML = '';
+        }
+
+        function goHome() {
+            const homeSection = document.getElementById('home');
+            const aboutContainer = document.getElementById('aboutContent');
+            const contactSection = document.getElementById('contact');
+            const rdContainer = document.getElementById('rdContent');
+            rdContainer.style.display = 'none';
+            contactSection.style.display = 'none';
+            aboutContainer.style.display = 'none';
+            homeSection.style.display = 'block';
+            
+        }function Contact() {
+            const contactSection = document.getElementById('contact');
+            const aboutContainer = document.getElementById('aboutContent');
+            const homeSection = document.getElementById('home');
+            const rdContainer = document.getElementById('rdContent');
+            rdContainer.style.display = 'none';
+            homeSection.style.display = 'none';
+            aboutContainer.style.display = 'none';
+            contactSection.style.display = 'block';
+
+        }
+        function goBack2() {
+            
+            const homeSection = document.getElementById('home');
+            homeSection.style.display = 'flex';
+            const contactSection = document.getElementById('contact');
+            contactSection.style.display = 'none';
+        }
+           
+       
+    </script>
+
+<main>
+    <div class="home" id="home"  >
+        <img src="index.png" alt="VEERA LABS Home Image">
+    </div>
+    <div class="about-content" id="aboutContent" style="display: none;">
+    </div>
+    <div class="rd-content" id="rdContent" style="display: none;">
+    </div>
+     <div class="contact" id="contact" style="display: none;">
+        <div class="profile-detail"><button class="back-button" onclick="goBack2()">← Back</button></div> 
+        <div class="contact-size">
+        <img src="contact.png" alt="VEERA LABS Contact Image" style ="width:100%; height:auto;">
+        </div>
+    </div>
+    
+    
+</main>
+<div class="navHam">
+
+</div>
+<div class="footer">
+    
+
+        
+</div>
+
+<div class="footerultra">
+    <p style="color:black; text-align:center; padding-top:5px;">© 2024 VEERA LABS. All rights reserved.</p>
+
+</div>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+ 
+</script>
+ 
+</body>
+</html>
