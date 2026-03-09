@@ -134,7 +134,7 @@ body{
 }
 
 /* Hero */
-.hero{min-height:60vh;display:flex;align-items:center;position:relative;color:#fff;background:linear-gradient(180deg,#151616d6,rgba(145, 158, 164, 0.173));overflow:hidden}
+.hero{min-height:60vh;display:flex;align-items:center;position:relative;color:#fff;background:linear-gradient(180deg,rgba(32, 32, 33, 0.9),rgba(217,223,233,0.85));overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.03), transparent 15%),linear-gradient(120deg, rgba(2,6,23,0.08), rgba(255,255,255,0));mix-blend-mode:overlay}
 .hero-inner{position:relative;padding:4rem 1rem}
 .hero-title{font-family:Montserrat, sans-serif;font-size:clamp(1.6rem,4vw,3rem);margin:0 0 0.5rem}
