@@ -7,7 +7,7 @@
   <meta name="description" content="Contact PharmaCorp — address, phone, email and form">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="images/logo.jpg">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
@@ -15,7 +15,7 @@
 <body>
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
-      <a class="logo" href="index.html"><img src="logo.jpg" alt="Veera Labs logo"><span class="sr-only">VeerLabs</span></a>
+      <a class="logo" href="index.html"><img src="images/logo.jpg" alt="Veera Labs logo"><span class="sr-only">Veera Labs</span></a>
       <button class="nav-toggle" id="navToggleContact" aria-label="Open navigation" aria-controls="mainNavContact" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -35,7 +35,7 @@
       <div class="col form-col">
         <h2>Contact Us</h2>
         <p>Please fill the form and our team will get back to you.</p>
-        <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+        <form id="contact-form" class="contact-form" action="#" method="post">
           <label for="name">Full name</label>
           <input id="name" name="name" type="text" required>
 
@@ -43,7 +43,7 @@
           <input id="email" name="email" type="email" required>
 
           <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel">
+          <input id="phone" name="phone" type="tel" required>
 
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" required></textarea>
@@ -54,7 +54,7 @@
 
       <aside class="col details-col">
         <h3>Contact Details</h3>
-        <p><strong>Address:</strong><br>347 Elizabeth Avenue, Suite 103<br>Somerset, New Jersey 08873, USA</p>
+        <p><strong>Address:</strong><br>347 Elizabeth Avenue, Suite (103),<br>Somerset, New Jersey 08873, USA</p>
         <p><strong>Phone:</strong><br><a href="tel:+19085666166">+1 908 566 6166</a></p>
         <p><strong>Email:</strong><br><a href="mailto:kollu@veeralabs.us">kollu@veeralabs.us</a></p>
 
@@ -96,9 +96,9 @@
   <script>
     (function(){
       // Replace these with your EmailJS values
-      const USER_ID = 'h7NleWSOLsGyxlPXw';
-      const SERVICE_ID = 'service_hdasldj';
-      const TEMPLATE_ID = 'template_o7juzls';
+      const USER_ID = 'ahUpMJyWGEhmeTnZ9';
+      const SERVICE_ID = 'service_x1tzhgj';
+      const TEMPLATE_ID = 'template_tmy8js2';
 
       // Initialize EmailJS (safe to call even if placeholders remain)
       try{ emailjs.init(USER_ID); }catch(e){ console.warn('EmailJS init failed (missing library?):', e); }
@@ -146,7 +146,3 @@
   </script>
 </body>
 </html>
-
-
-
-
