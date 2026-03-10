@@ -6,7 +6,7 @@
   --bg:#ffffff;
   --accent-1:#056232; /* blue accent */
   --accent-2:#0a58ca; /* darker */
-  --muted:#6b7280;
+  --muted:#010712;
   --radius:10px;
   --container:1100px;
   --max-width:1200px;
@@ -31,22 +31,27 @@ body{
   background: #006d77;/*background: linear-gradient(90deg, #004e92, #00c6ff);//*/
 
   color:#110d0d;
-  font-size:20px;
+  font-size:30px;
   padding:4px 0;
   line-height:2;   /* FIXED */
   overflow:hidden;
   white-space:nowrap;
+  
+  
 }
 .ticker{
   width:100%;
   overflow:hidden;
   position:relative;
+  
 }
 
 .ticker-track{
   display:inline-block;
   padding-left:100%;
   animation: scrollTicker 25s linear infinite;
+  font-family:'Nawlexz' , serif;
+  
 }
 
 @keyframes scrollTicker{
@@ -134,11 +139,11 @@ body{
 }
 
 /* Hero */
-.hero{min-height:60vh;display:flex;align-items:center;position:relative;color:#fff;background:linear-gradient(180deg,rgba(32, 32, 33, 0.9),rgba(217,223,233,0.85));overflow:hidden}
+.hero{min-height:60vh;display:flex;align-items:center;position:relative;color:#140101;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.03), transparent 15%),linear-gradient(120deg, rgba(2,6,23,0.08), rgba(255,255,255,0));mix-blend-mode:overlay}
 .hero-inner{position:relative;padding:4rem 1rem}
-.hero-title{font-family:Montserrat, sans-serif;font-size:clamp(1.6rem,4vw,3rem);margin:0 0 0.5rem}
-.hero-sub{font-size:1rem;max-width:60ch;margin:0 0 1.25rem}
+
+.hero-sub{font-family:'Nawlexz', serif;font-size:3rem;max-width:60ch;margin:0 0 1.25rem}
 .hero-cta{display:flex;gap:0.75rem;flex-wrap:wrap}
 
 .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.1rem;border-radius:8px;text-decoration:none;border:0;font-weight:600;transition:transform .12s ease, box-shadow .12s ease}
@@ -156,6 +161,14 @@ body{
 .grid{display:grid;gap:1.25rem}
 .cols-2{grid-template-columns:1fr;}
 .cols-3{grid-template-columns:1fr;}
+.section h2{
+  font-size: 28px;
+  
+}
+.cta-panel h2{
+  
+  margin-bottom: 0.75rem;
+}
 
 body {
   background-image: url("images1/WaterSplash.png");
@@ -171,7 +184,7 @@ body {
 .rd-bg-card {
   position: relative;
   /* REPLACE 'your-image-name.jpg' WITH YOUR ACTUAL FILENAME */
-  background-image: url("images1/Tabs.png"); 
+  background-image: url("images1/Tabs2.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -266,7 +279,7 @@ body {
 }
 /* Equipment list */
 .equipment-list{list-style:none;padding:0}
-.equipment-list li{padding:0.3rem 0;border-bottom:1px solid #f1f7ff;color:var(--muted)}
+.equipment-list li{padding:0.3rem 0;color:var(--muted)}
 
 /* Gallery styles */
 .gallery {display: grid; gap: 1.5rem;}
