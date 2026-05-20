@@ -122,3 +122,34 @@
     });
   }
 })();
+
+// Wait until DOM loads
+document.addEventListener("DOMContentLoaded", function () {
+
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+  setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+ }, 5000);
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  // Next button
+  nextBtn.addEventListener("click", function () {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  // Previous button
+  prevBtn.addEventListener("click", function () {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+});
