@@ -465,5 +465,74 @@ a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(13,110,25
 .col , .container small{
   font-size:18px;
 }
+/* ==========================
+   R&D EQUIPMENT TABLE
+========================== */
+
+.table-responsive{
+  overflow-x:auto;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+.rd-equipment-table{
+  width:100%;
+  min-width:900px;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.rd-equipment-table thead{
+  background:linear-gradient(90deg,#056232,#0a58ca);
+}
+
+.rd-equipment-table thead th{
+  color:#fff;
+  font-family:Montserrat,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  padding:18px;
+  text-align:left;
+}
+
+.rd-equipment-table td{
+  padding:16px;
+  border:1px solid #e5e7eb;
+  vertical-align:top;
+  font-size:16px;
+  line-height:1.6;
+}
+
+.rd-equipment-table tbody tr:nth-child(even){
+  background:#f8fafc;
+}
+
+.rd-equipment-table tbody tr:hover{
+  background:#eaf4ff;
+  transition:.3s;
+}
+
+.rd-equipment-table tbody td:first-child{
+  font-weight:600;
+  color:#056232;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .rd-equipment-table{
+    min-width:1000px;
+  }
+
+  .rd-equipment-table th,
+  .rd-equipment-table td{
+    padding:12px;
+    font-size:18px;
+  }
+}
 
 /* End of stylesheet */
