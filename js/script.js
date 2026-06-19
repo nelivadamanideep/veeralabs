@@ -1,7 +1,7 @@
 /* js/script.js
    Minimal JS for navigation, dropdowns and smooth scrolling
 */
-(function(){
+(function () {
   // Year injections
   document.addEventListener('DOMContentLoaded', function () {
     var y = new Date().getFullYear();
@@ -48,7 +48,7 @@
       var anyNav = document.querySelector('.main-nav.open');
       if (anyNav && !anyNav.contains(e.target) && !e.target.classList.contains('nav-toggle')) {
         anyNav.classList.remove('open');
-        document.querySelectorAll('.nav-toggle').forEach(function(b){b.setAttribute('aria-expanded','false')});
+        document.querySelectorAll('.nav-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false') });
       }
     });
 
@@ -123,30 +123,33 @@
   }
 })();
 
-// Wait until DOM loads
 document.addEventListener("DOMContentLoaded", function () {
 
-  let index = 0;
   const slides = document.querySelectorAll(".slide");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
-  setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
- }, 5000);
+
+  if (!slides.length || !nextBtn || !prevBtn) {
+    return;
+  }
+
+  let index = 0;
 
   function showSlide(i) {
     slides.forEach(slide => slide.classList.remove("active"));
     slides[i].classList.add("active");
   }
 
-  // Next button
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5000);
+
   nextBtn.addEventListener("click", function () {
     index = (index + 1) % slides.length;
     showSlide(index);
   });
 
-  // Previous button
   prevBtn.addEventListener("click", function () {
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
