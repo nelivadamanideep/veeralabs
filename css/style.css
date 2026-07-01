@@ -57,44 +57,36 @@ h6,
 }
 
 /* Scrolling Top Bar */
+
 .top-bar {
-
   background: #006d77;
-  /*background: linear-gradient(90deg, #004e92, #00c6ff);//*/
-
-  color: #110d0d;
-  font-size: 30px;
-  padding: 4px 0;
-  line-height: 2;
-  /* FIXED */
-  overflow: hidden;
-  white-space: nowrap;
-
-
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .ticker {
   width: 100%;
   overflow: hidden;
-  position: relative;
-
 }
 
 .ticker-track {
   display: inline-block;
-  padding-left: 100%;
-  animation: scrollTicker 25s linear infinite;
+  white-space: nowrap;
+  color: #000000;
+  font-size: 30px;
   font-family: 'Nawlexz', serif;
-
+  padding-left: 100%;
+  animation: ticker 8s linear infinite;
 }
 
-@keyframes scrollTicker {
+@keyframes ticker {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-120%);
   }
 }
 
@@ -423,8 +415,8 @@ h6,
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease
-  
 }
+
 .card h3 {
   font-size: 22px;
   margin-top: 0;
@@ -438,14 +430,14 @@ h6,
 
 /* Sections */
 .section {
-  padding:  1rem;
+  padding: 1rem;
 }
 
 .lead {
   color: var(--muted);
   max-width: 70ch;
   font-size: 20px;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 }
 
 .grid {
@@ -937,14 +929,14 @@ h5 {
   align-items: flex-start;
   gap: 50px;
   padding: 50px 0;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 .lab-content {
   flex: 1;
   margin: 0;
   margin-top: 0;
-  
+
 }
 
 
@@ -956,8 +948,8 @@ h5 {
   line-height: 1.2;
   margin-top: 0;
   padding-top: 0;
-  
-  
+
+
 }
 
 .lab-content p {
@@ -989,8 +981,8 @@ h5 {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0, 0, 0, .15);
-  margin-top:10px;
-  margin-right:50px;
+  margin-top: 10px;
+  margin-right: 50px;
 }
 
 .lab-video-box video {
@@ -1007,8 +999,8 @@ h5 {
   .lab-section {
     flex-direction: column;
     padding: 60px 0;
-    
-    
+
+
   }
 
   .lab-content h2 {
