@@ -18,7 +18,7 @@
 
 html,
 body {
-  height: 100%
+  height: 100%;
 }
 
 body {
@@ -27,6 +27,14 @@ body {
   color: #0b1220;
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1,
@@ -390,7 +398,7 @@ h6,
   background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
   color: #fff;
   box-shadow: 0 6px 16px rgba(75, 77, 80, 0.085);
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .btn.ghost {
@@ -415,6 +423,12 @@ h6,
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease
+  
+}
+.card h3 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 .card:hover {
@@ -588,6 +602,7 @@ body {
   margin-top: 0rem
 }
 
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -618,7 +633,7 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.6rem;
+  padding: 0.2rem;
   border: 1px solid #e6eefc;
   border-radius: 8px
 }
@@ -733,11 +748,11 @@ body {
   }
 
   .contact-grid {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
   }
 
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 3.5fr;
   }
 }
 
@@ -827,7 +842,10 @@ textarea:focus {
 
 .col h4,
 h5 {
-  font-size: 20px;
+  font-size: 25px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
 }
 
 #form-col,
